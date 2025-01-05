@@ -1,22 +1,21 @@
 
+#include <iostream>
 #include "DataAccess.h"
 
-DataAccess::DataAccess(char path) {
+DataAccess::DataAccess():opened(false) {
 }
 
 DataAccess::~DataAccess() {
-    DataAccess::close();
-}
-
-void DataAccess::open() {
-}
-
-void DataAccess::close() {
-}
-
-void DataAccess::read(char &buffer, size_t size) {
-}
-
-void DataAccess::write(const char &buffer, size_t size) {
 
 }
+
+ssize_t DataAccess::read(uint8_t *buffer, size_t size) {
+    std::cerr << "Method \"read\" not implemented" << std::endl;
+    return -1;
+}
+
+ssize_t DataAccess::write(const uint8_t *buffer, size_t size) {
+    std::cerr << "method \"write\" not implemented" << std::endl;
+    return -1;
+}
+
